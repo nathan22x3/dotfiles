@@ -1,0 +1,15 @@
+# suffix aliases
+alias -s {css,sass,json,js,ts,jsx,tsx,py}=code
+
+# open config
+alias vcf="cd $HOME/.dotfiles/.config/nvim"
+
+# exa
+alias ls="exa -lh --icons --git --git-ignore"
+alias la="exa -lha --icons --git --git-ignore"
+alias ll="exa -T --icons --git --git-ignore"
+alias lla="exa -Ta --icons --git --git-ignore"
+
+# others
+alias v="nvim"
+alias g="git"

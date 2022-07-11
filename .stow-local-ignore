@@ -1,0 +1,11 @@
+# source control
+/.git
+.gitignore
+
+# license
+LICENSE
+
+# misc
+.DS_Store
+README.md
+

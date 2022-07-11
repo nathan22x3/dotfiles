@@ -1,0 +1,49 @@
+[user]
+  name = Nathan Nguyen
+  email = 67423224+nathan22x3@users.noreply.github.com
+[core]
+  editor = nvim
+	autocrlf = input
+  pager = delta
+[init]
+  defaultBranch = main
+[hub]
+	protocol = ssh
+[alias]
+  cf = config --global -e
+  st = status
+  save = "!git add . && git commit"
+  undo = reset HEAD~1 --mixed
+  clean = reset --hard
+  br = branch --format='%(HEAD) %(color:red)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) %(color:reset)by %(color:blue)%(authorname)' --sort=-committerdate
+  co = checkout
+  up = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
+  sync = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
+  update = pull --rebase
+  lg = log --graph --date=relative --all --pretty=format:'%Cred%h%Creset -%C(auto)%d %s %Cgreen(%cr) %Cresetby %Cblue%cn%Creset' -n20
+  lz = "!lazygit"
+[pager]
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
+[interactive]
+  diffFilter = delta --color-only --paging=never --features=interactive
+[delta]
+  features = line-numbers decorations
+  syntax-theme = "gruvbox-dark"
+  plus-style = "#50fa7b" bold "#184b25"
+  minus-style = "#ff5555" bold "#4d1a1a"
+[delta "interactive"]
+  keep-plus-minus-markers = true
+[delta "decorations"]
+  commit-decoration-style = blue ol
+  commit-style = raw
+  file-style = omit
+  hunk-header-decoration-style = blue box
+  hunk-header-file-style = red
+  hunk-header-line-number-style = "#50fa7b"
+  hunk-header-style = file line-number syntax
+[delta "line-numbers"]
+  line-numbers-plus-style = "#50fa7b"
+  line-numbers-minus-style = "#ff5555"
