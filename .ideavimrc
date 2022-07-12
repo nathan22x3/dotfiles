@@ -60,9 +60,9 @@ inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
 
 " Tab
-nmap J :tabp<cr>
-nmap K :tabn<cr>
-nmap <leader>q :tabc<cr>
+nmap H :tabp<cr>
+nmap L :tabn<cr>
+nmap <leader>bd :tabc<cr>
 
 " Quick show up tooltips
 nmap gh :action QuickJavaDoc<cr>

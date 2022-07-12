@@ -1,2 +1,5 @@
+# neovim
+/.config/nvim/plugin
+
 # misc
 .DS_Store
