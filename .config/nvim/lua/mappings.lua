@@ -1,26 +1,26 @@
 HOME = os.getenv('HOME')
 
-function map(mode, shortcut, command)
+local function map(mode, shortcut, command)
   vim.keymap.set(mode, shortcut, command, { noremap = true, silent = true })
 end
 
-function nmap(shortcut, command)
+local function nmap(shortcut, command)
   map('n', shortcut, command)
 end
 
-function imap(shortcut, command)
+local function imap(shortcut, command)
   map('i', shortcut, command)
 end
 
-function vmap(shortcut, command)
+local function vmap(shortcut, command)
   map('v', shortcut, command)
 end
 
-function cmap(shortcut, command)
+local function cmap(shortcut, command)
   map('c', shortcut, command)
 end
 
-function tmap(shortcut, command)
+local function tmap(shortcut, command)
   map('t', shortcut, command)
 end
 
@@ -71,8 +71,13 @@ end, { expr = true, noremap = true }) -- accept completion
 
 vim.keymap.set('i', '<C-space>', 'coc#refresh()', { expr = true, noremap = true }) -- trigger completion
 
+nmap('gd', '<Plug>(coc-definition)')
+nmap('gy', '<Plug>(coc-type-definition)')
+nmap('gi', '<Plug>(coc-implementation)')
+nmap('gr', '<Plug>(coc-references)')
+
 -- telescope
-nmap('<leader>.', ':Telescope find_files<cr>')
+nmap('<C-p>', ':Telescope find_files<cr>')
 nmap('<leader>f', ':Telescope live_grep<cr>')
 nmap('\\\\', ':Telescope buffers<cr>')
 nmap('<leader>,', ':Telescope help_tags<cr>')

@@ -1,5 +1,15 @@
 -- global
 vim.g.mapleader = ' '
+vim.g.coc_global_extensions = {
+  'coc-css',
+  'coc-eslint',
+  'coc-git',
+  'coc-html',
+  'coc-json',
+  'coc-markdownlint',
+  'coc-sumneko-lua',
+  'coc-tsserver',
+}
 
 -- basic settings
 local cmd = vim.cmd
@@ -73,4 +83,4 @@ opt.swapfile = false
 -- misc
 table.insert(opt.shortmess, 'c')
 table.insert(opt.path, '**') -- list of directories will lookup when using search commands
-table.insert(opt.wildignore, '*/node_modules/*') -- list of directories will ignore when using search commands 
+table.insert(opt.wildignore, '*/node_modules/*') -- list of directories will ignore when using search commands
