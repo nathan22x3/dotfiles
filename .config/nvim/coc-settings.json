@@ -1,4 +1,14 @@
 {
-  "sumneko-lua.enableNvimLuaDev": true,
-  "Lua.telemetry.enable": true
+  "Lua.telemetry.enable": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "markdown",
+    "typescript",
+    "typescriptreact"
+  ],
+  "sumneko-lua.enableNvimLuaDev": true
 }

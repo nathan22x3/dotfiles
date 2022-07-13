@@ -25,7 +25,7 @@ local function tmap(shortcut, command)
 end
 
 -- basic mappings
-nmap('<leader>r', ':so ' .. HOME .. '/.dotfiles/.config/nvim/init.lua<cr>') -- reload configurations
+nmap('<leader>r', ':so ' .. HOME .. '/.config/nvim/init.lua<cr>') -- reload configurations
 nmap('<leader>h', ':nohl<cr>') -- clear search highlighting
 imap('jj', '<Esc>') -- quickly exit insert mode
 
@@ -72,9 +72,32 @@ end, { expr = true, noremap = true }) -- accept completion
 vim.keymap.set('i', '<C-space>', 'coc#refresh()', { expr = true, noremap = true }) -- trigger completion
 
 nmap('gd', '<Plug>(coc-definition)')
-nmap('gy', '<Plug>(coc-type-definition)')
+nmap('gt', '<Plug>(coc-type-definition)')
 nmap('gi', '<Plug>(coc-implementation)')
 nmap('gr', '<Plug>(coc-references)')
+nmap('<F2>', '<Plug>(coc-rename)')
+
+nmap('gh', function()
+  if vim.fn.CocAction('hasProvider', 'hover') then
+    vim.fn.CocActionAsync('doHover')
+  else
+    vim.fn.feedkeys('K', 'in')
+  end
+end)
+
+nmap('<leader>.', '<Plug>(coc-codeaction)')
+nmap('<F7>', '<Plug>(coc-diagnostic-prev)')
+nmap('<F8>', '<Plug>(coc-diagnostic-next)')
+
+if vim.fn.has('nvim-0.4.0') or vim.fn.has('patch-8.2.0750') then
+  vim.keymap.set('n', '<C-j>', function()
+    return vim.fn['coc#float#has_scroll']() == 1 and vim.fn['coc#float#scroll'](1) or '<C-j>'
+  end, { expr = true, nowait = true, noremap = true, silent = true })
+
+  vim.keymap.set('n', '<C-k>', function()
+    return vim.fn['coc#float#has_scroll']() == 1 and vim.fn['coc#float#scroll'](0) or '<C-k>'
+  end, { expr = true, nowait = true, noremap = true, silent = true })
+end
 
 -- telescope
 nmap('<C-p>', ':Telescope find_files<cr>')
