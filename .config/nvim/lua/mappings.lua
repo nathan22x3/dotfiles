@@ -75,4 +75,4 @@ vim.keymap.set('i', '<C-space>', 'coc#refresh()', { expr = true, noremap = true 
 nmap('<leader>.', ':Telescope find_files<cr>')
 nmap('<leader>f', ':Telescope live_grep<cr>')
 nmap('\\\\', ':Telescope buffers<cr>')
-nmap(';;', ':Telescope help_tags<cr>')
+nmap('<leader>,', ':Telescope help_tags<cr>')

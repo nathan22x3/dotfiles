@@ -2,8 +2,8 @@
 vim.g.mapleader = ' '
 
 -- basic settings
-local opt = vim.opt
 local cmd = vim.cmd
+local opt = vim.opt
 
 cmd('syntax enable')
 opt.encoding = 'utf-8'
@@ -55,6 +55,10 @@ opt.expandtab = true -- expand tab to spaces
 opt.tabstop = 2 -- number of spaces that a <Tab> in the file counts for
 opt.softtabstop = 2 -- number of spaces that a <Tab> counts for while performing editing operations
 opt.shiftwidth = 2 -- number of spaces to use for each step of (auto)indent
+
+-- window
+opt.splitright = true -- focus to the new window when splitting horizontal
+opt.splitbelow = true -- focus to the new window when splitting vertical
 
 -- searching
 opt.incsearch = true -- starts searching as soon as typing, without enter needed
