@@ -15,4 +15,5 @@ return require('packer').startup(function()
   use 'tpope/vim-fugitive'
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
+  use 'kyazdani42/nvim-tree.lua'
 end)

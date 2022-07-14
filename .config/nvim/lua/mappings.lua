@@ -104,3 +104,6 @@ nmap('<C-p>', ':Telescope find_files<cr>')
 nmap('<leader>f', ':Telescope live_grep<cr>')
 nmap('\\\\', ':Telescope buffers<cr>')
 nmap('<leader>,', ':Telescope help_tags<cr>')
+
+-- nvim-tree
+nmap('<C-b>', ':NvimTreeToggle<cr>')
