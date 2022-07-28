@@ -32,13 +32,14 @@ opt.winblend = 0
 opt.background = 'dark'
 cmd('colorscheme gruvbox')
 cmd('highlight Normal guibg=NONE ctermbg=NONE')
+cmd('highlight WinSeparator guibg=NONE')
 
 -- display
 opt.lazyredraw = true -- for better performance while	executing macros
 opt.synmaxcol = 300 -- stop syntax highlight after number of lines for performance
 
 opt.showmode = false
-opt.laststatus = 2 -- always show status line
+opt.laststatus = 3 -- always show status line of the last window
 opt.scrolloff = 10 -- keep above and below the cursor number of lines
 
 opt.foldenable = false
