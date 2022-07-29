@@ -1,0 +1,255 @@
+{
+    "apps": [
+        {
+            "Source": "main",
+            "Version": "22.01",
+            "Name": "7zip",
+            "Info": "",
+            "Updated": "2022-07-20T20:29:18.111752+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "0.21.0",
+            "Name": "bat",
+            "Info": "",
+            "Updated": "2022-05-18T10:33:11.2171557+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "2022-07-19",
+            "Name": "cacert",
+            "Info": "",
+            "Updated": "2022-07-20T20:29:19.1352748+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "3.23.3",
+            "Name": "cmake",
+            "Info": "",
+            "Updated": "2022-07-29T10:14:44.3731236+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "0.2013.07.19",
+            "Name": "cowsay",
+            "Info": "",
+            "Updated": "2022-04-10T21:49:22.2026499+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "7.84.0_6",
+            "Name": "curl",
+            "Info": "",
+            "Updated": "2022-07-29T10:14:59.5368345+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "0.13.0",
+            "Name": "delta",
+            "Info": "",
+            "Updated": "2022-05-18T10:33:16.9778725+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "1.24.1",
+            "Name": "deno",
+            "Info": "",
+            "Updated": "2022-07-29T10:15:04.9914928+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "0.31.0",
+            "Name": "fzf",
+            "Info": "",
+            "Updated": "2022-07-29T10:15:06.2921426+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "11.2.0",
+            "Name": "gcc",
+            "Info": "",
+            "Updated": "2022-04-01T12:06:50.786426+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "2.37.1.windows.1",
+            "Name": "git",
+            "Info": "",
+            "Updated": "2022-07-20T20:30:29.7382482+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "2.3.7",
+            "Name": "gpg",
+            "Info": "",
+            "Updated": "2022-07-20T20:30:49.9179658+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "3.7",
+            "Name": "grep",
+            "Info": "",
+            "Updated": "2022-05-05T15:31:28.6799049+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "2.14.2",
+            "Name": "hub",
+            "Info": "",
+            "Updated": "2022-04-23T09:12:16.7322458+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "1.6",
+            "Name": "jq",
+            "Info": "",
+            "Updated": "2022-04-29T10:54:42.3136513+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "0.18.1",
+            "Name": "lazydocker",
+            "Info": "",
+            "Updated": "2022-07-08T19:05:36.6098195+07:00"
+        },
+        {
+            "Source": "extras",
+            "Version": "0.35",
+            "Name": "lazygit",
+            "Info": "",
+            "Updated": "2022-07-29T10:15:11.1899964+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "590",
+            "Name": "less",
+            "Info": "",
+            "Updated": "2022-05-22T12:05:53.2684253+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "0.2018.07.25",
+            "Name": "ln",
+            "Info": "",
+            "Updated": "2022-04-27T09:10:46.8188249+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "4.3",
+            "Name": "make",
+            "Info": "",
+            "Updated": "2022-04-01T12:06:53.3550696+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "0.7.2",
+            "Name": "neovim",
+            "Info": "",
+            "Updated": "2022-07-20T20:33:01.2403781+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "1.1.9",
+            "Name": "nvm",
+            "Info": "",
+            "Updated": "2022-03-28T10:51:56.4870189+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "7.1.0",
+            "Name": "octave",
+            "Info": "",
+            "Updated": "2022-04-16T09:28:22.7044015+07:00"
+        },
+        {
+            "Source": "java",
+            "Version": "18.0.2-9",
+            "Name": "openjdk",
+            "Info": "",
+            "Updated": "2022-07-20T20:33:32.6838159+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "8.9.1.0p1",
+            "Name": "openssh",
+            "Info": "",
+            "Updated": "2022-04-01T12:04:09.5070249+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "7.6.0",
+            "Name": "pnpm",
+            "Info": "",
+            "Updated": "2022-07-29T10:15:21.7132576+07:00"
+        },
+        {
+            "Source": "extras",
+            "Version": "1.1.0",
+            "Name": "posh-git",
+            "Info": "",
+            "Updated": "2022-04-05T10:09:24.714646+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "1.9.1",
+            "Name": "starship",
+            "Info": "",
+            "Updated": "2022-07-20T20:34:09.2189143+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "0.2020.01.26",
+            "Name": "sudo",
+            "Info": "",
+            "Updated": "2022-03-28T10:50:58.9720138+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "0.6.1",
+            "Name": "tldr",
+            "Info": "",
+            "Updated": "2022-04-01T12:59:56.2607627+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "0.2018.07.25",
+            "Name": "touch",
+            "Info": "",
+            "Updated": "2022-05-02T08:35:50.1377926+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "1.21.3",
+            "Name": "wget",
+            "Info": "",
+            "Updated": "2022-03-28T10:52:01.3356438+07:00"
+        },
+        {
+            "Source": "main",
+            "Version": "2.20",
+            "Name": "which",
+            "Info": "",
+            "Updated": "2022-04-01T13:00:18.4633393+07:00"
+        }
+    ],
+    "buckets": [
+        {
+            "Name": "extras",
+            "Source": "https://github.com/ScoopInstaller/Extras",
+            "Updated": "2022-07-29T22:11:07+07:00",
+            "Manifests": 1620
+        },
+        {
+            "Name": "java",
+            "Source": "https://github.com/ScoopInstaller/Java",
+            "Updated": "2022-07-29T09:25:28+07:00",
+            "Manifests": 225
+        },
+        {
+            "Name": "main",
+            "Source": "https://github.com/ScoopInstaller/Main",
+            "Updated": "2022-07-29T19:31:54+07:00",
+            "Manifests": 1064
+        }
+    ]
+}
