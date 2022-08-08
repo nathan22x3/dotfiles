@@ -94,6 +94,9 @@ export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # this loads key bindings and fuzzy completion
 export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 
+bindkey -r '^T'
+bindkey '^F' fzf-file-widget
+
 # bat
 export BAT_THEME="gruvbox-dark"
 
