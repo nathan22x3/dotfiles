@@ -57,17 +57,17 @@ nmap('<leader>wk', '<C-w>k') -- jump to the above window
 nmap('<leader>wl', '<C-w>l') -- jump to the right window
 
 -- coc.nvim and completion
-vim.keymap.set('i', '<Tab>', function()
-  return vim.fn.pumvisible() == 1 and '<C-n>' or '<Tab>'
-end, { expr = true }) -- cycle forward completion menu
+vim.keymap.set('i', '<Tab>',
+  'coc#pum#visible() ? coc#pum#next(1) : "\\<Tab>" ',
+  { expr = true, noremap = true }) -- cycle forward completion menu
 
-vim.keymap.set('i', '<S-Tab>', function()
-  return vim.fn.pumvisible() == 1 and '<C-p>' or '<S-Tab>'
-end, { expr = true }) -- cycle backward completion menu
+vim.keymap.set('i', '<S-Tab>',
+  'coc#pum#visible() ? coc#pum#prev(1) : "\\<C-h>"',
+  { expr = true, noremap = true }) -- cycle backward completion menu
 
-vim.keymap.set('i', '<cr>', function()
-  return vim.fn.pumvisible() == 1 and '<C-y>' or '<C-g>u<cr>'
-end, { expr = true, noremap = true }) -- accept completion
+vim.keymap.set( 'i', '<cr>',
+  'coc#pum#visible() ? coc#pum#confirm() : "\\<C-g>u\\<cr>\\<c-r>=coc#on_enter()\\<cr>"',
+  { expr = true, noremap = true }) -- accept completion
 
 vim.keymap.set('i', '<C-space>', 'coc#refresh()', { expr = true, noremap = true }) -- trigger completion
 
