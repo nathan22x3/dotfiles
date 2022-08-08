@@ -1,6 +1,10 @@
 # fig pre block
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 
+# default
+export TERM="xterm-256color"
+export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..|..|clear)"
+
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
 
