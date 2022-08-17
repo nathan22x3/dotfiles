@@ -1,7 +1,7 @@
 "-------------------------------------------------------------------------------
-" Basic settings
+" basic settings
 "-------------------------------------------------------------------------------
-" Idea
+" idea
 set idearefactormode=keep
 set ideajoin
 
@@ -17,7 +17,7 @@ sethandler <C-Q> a:ide
 sethandler <C-R> n-v:vim i:ide
 sethandler <C-^> a:vim
 
-" Editor
+" editor
 syntax enable
 set number relativenumber
 set showmode
@@ -26,7 +26,7 @@ set scrolloff=10
 set clipboard+=unnamed
 
 "-------------------------------------------------------------------------------
-" Plugins
+" plugins
 "-------------------------------------------------------------------------------
 set surround
 set NERDTree
@@ -35,34 +35,35 @@ nnoremap <leader>n :NERDTree<cr>
 nnoremap <C-t> :NERDTreeToggle<cr>
 
 "-------------------------------------------------------------------------------
-" Mappings
+" mappings
 "-------------------------------------------------------------------------------
-" Remove search highlight
+" remove search highlight
 nnoremap <leader><leader> :nohl<cr>
 
-" Increase/decrease number
+" quick save
+nnoremap <leader>w :w<cr>
+inoremap <leader>w <Esc>:w<cr>
+
+" increase/decrease number
 nnoremap + <C-a>
 nnoremap - <C-x>
 
-" Move line
+" move line
 nnoremap <C-j> :m +1<cr>
 nnoremap <C-k> :m -2<cr>
 inoremap <C-j> <Esc>:m +1<cr>gi
 inoremap <C-k> <Esc>:m -2<cr>gi
 
-" Exit insert mode
+" exit insert mode
 inoremap jj <Esc>
 
-" Movement in insert mode
+" movement in insert mode
 inoremap <C-h> <C-o>h
 inoremap <C-l> <C-o>l
 inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
 
-" Tab
+" tab
 nmap H :tabp<cr>
 nmap L :tabn<cr>
-nmap <leader>bd :tabc<cr>
-
-" Quick show up tooltips
-nmap gh :action QuickJavaDoc<cr>
+nmap <leader>q :tabc<cr>

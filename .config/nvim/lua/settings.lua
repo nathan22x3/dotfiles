@@ -8,6 +8,7 @@ vim.g.coc_global_extensions = {
   'coc-json',
   'coc-markdownlint',
   'coc-prettier',
+  'coc-rust-analyzer',
   'coc-sumneko-lua',
   'coc-tsserver',
 }

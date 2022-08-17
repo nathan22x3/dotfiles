@@ -68,6 +68,10 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
+# pnpm
+export PNPM_HOME="/Users/nam.nguyen13/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
 # android studio
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
