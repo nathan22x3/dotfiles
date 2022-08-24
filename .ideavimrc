@@ -9,6 +9,7 @@ let mapleader = " "
 
 sethandler <C-A> a:ide
 sethandler <C-B> n-v:vim i:ide
+sethandler <C-C> a:vim
 sethandler <C-G> a:ide
 sethandler <C-H> i:vim n-v:ide
 sethandler <C-L> i:vim n-v:ide
@@ -28,8 +29,12 @@ set clipboard+=unnamed
 "-------------------------------------------------------------------------------
 " plugins
 "-------------------------------------------------------------------------------
-set surround
 set NERDTree
+set ReplaceWithRegister
+set argtextobj
+set commentary
+set surround
+set textobj-entire
 
 nnoremap <leader>n :NERDTree<cr>
 nnoremap <C-t> :NERDTreeToggle<cr>
