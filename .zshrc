@@ -3,24 +3,19 @@
 
 # default
 export TERM="xterm-256color"
-export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..|..|clear)"
+export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|-|cd ..|..|clear)"
+export PATH="$HOME/bin:$PATH"
 
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
 
 plugins=(
   zsh-autosuggestions
+  zsh-interactive-cd
   zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
 
 # aliases
 [ -f ~/.zsh_aliases ] && \. $HOME/.zsh_aliases
@@ -69,19 +64,27 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
 # pnpm
-export PNPM_HOME="/Users/nam.nguyen13/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
 # android studio
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
-export PATH=$PATH:$JAVA_HOME/bin
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
+export PATH="$ANDROID_HOME/emulator:$PATH"
+export PATH="$ANDROID_HOME/tools:$PATH"
+export PATH="$ANDROID_HOME/tools/bin:$PATH"
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+export PATH="$JAVA_HOME/bin:$PATH"
 
-# pyenv
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # this loads key bindings and fuzzy completion
+export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
+
+bindkey -r '^T'
+bindkey '^F' fzf-file-widget
+
+# python
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
@@ -94,12 +97,13 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
 
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # this loads key bindings and fuzzy completion
-export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
+# php
+export PHP_BIN="$(brew --prefix)/bin/php"
 
-bindkey -r '^T'
-bindkey '^F' fzf-file-widget
+# bun
+export BUN_PATH="$HOME/.bun"
+export PATH="$BUN_PATH/bin:$PATH"
+[ -s "$BUN_PATH/_bun" ] && source "$BUN_PATH/_bun" # this load bun completions
 
 # bat
 export BAT_THEME="gruvbox-dark"
@@ -107,22 +111,12 @@ export BAT_THEME="gruvbox-dark"
 # thefuck
 eval $(thefuck --alias)
 
-# php
-export PHP_BIN="$(brew --prefix)/bin/php"
-export PATH="$HOME/bin:$PATH"
-
-# bun
-export BUN_PATH="$HOME/.bun"
-export PATH="$BUN_PATH/bin:$PATH"
-[ -s "$BUN_PATH/_bun" ] && source "$BUN_PATH/_bun" # this load bun completions
-
 # zplug
-export ZPLUG_HOME=$HOME/.zplug
+export ZPLUG_HOME="$HOME/.zplug"
 source $ZPLUG_HOME/init.zsh
 
 zplug "changyuheng/fz", defer:1
 zplug "rupa/z", use:z.sh
-zplug "bigH/git-fuzzy", as:command, use:"bin/git-fuzzy"
 
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
