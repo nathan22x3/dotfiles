@@ -2,13 +2,21 @@
   name = Nathan Nguyen
   email = 67423224+nathan22x3@users.noreply.github.com
 [core]
-  editor = nvim
+  editor = lvim
 	autocrlf = input
   pager = delta
 [init]
   defaultBranch = main
 [hub]
 	protocol = ssh
+[commit]
+	gpgsign = true # sign all commits
+[tag]
+	gpgsign = true # sign all tags
+[gpg "x509"]
+	program = gitsign # use gGtsign for signing
+[gpg]
+	format = x509 # gitsign expects x509 args
 [alias]
   cf = config --global -e
   st = status
