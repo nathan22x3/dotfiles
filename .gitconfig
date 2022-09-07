@@ -7,8 +7,6 @@
   pager = delta
 [init]
   defaultBranch = main
-[hub]
-	protocol = ssh
 [commit]
 	gpgsign = true # sign all commits
 [tag]
@@ -17,6 +15,8 @@
 	program = gitsign # use gGtsign for signing
 [gpg]
 	format = x509 # gitsign expects x509 args
+[hub]
+	protocol = ssh
 [alias]
   cf = config --global -e
   st = status
