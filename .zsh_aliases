@@ -1,3 +1,8 @@
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
+
 # vim and emacs
 alias vim="lvim"
 alias emacs="emacsclient -c -a 'emacs'"
@@ -6,7 +11,7 @@ alias emacs="emacsclient -c -a 'emacs'"
 alias g="git"
 
 # exa
-alias ls="exa -lh --icons --git --git-ignore --color=always --group-directories-first"
+alias ls="exa -lh --icons --git --git-ignore --color=always --group-directories-first"  # default listing
 alias la="exa -lha --icons --git --git-ignore --color=always --group-directories-first" # all files and dirs
-alias ll="exa -T --icons --git --git-ignore --color=always --group-directories-first" # long format
-alias lt="exa -Ta --icons --git --git-ignore --color=always --group-directories-first" # tree format
+alias ll="exa -T --icons --git --git-ignore --color=always --group-directories-first"   # long format
+alias lt="exa -Ta --icons --git --git-ignore --color=always --group-directories-first"  # tree format

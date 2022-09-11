@@ -1,10 +1,19 @@
 # fig pre block
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 
-# default
+# core settings
 export TERM="xterm-256color"
+export VISUAL="$(which lvim)"
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|-|cd ..|..|clear)"
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH" # local binaries
+
+# pagers
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export GIT_PAGER="delta --paging=never"
+
+# starship
+eval "$(starship init zsh)"
+export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
@@ -32,9 +41,12 @@ then
   compinit
 fi
 
-# starship
-eval "$(starship init zsh)"
-export STARSHIP_CONFIG="$HOME/.config/starship.toml"
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # this loads key bindings and fuzzy completion
+export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
+
+bindkey -r '^T'
+bindkey '^F' fzf-file-widget
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -67,20 +79,13 @@ load-nvmrc
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
-# google cloud
-export PATH="$HOME/google-cloud-sdk/bin:$PATH"
-
 # android studio
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
 export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
 
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # this loads key bindings and fuzzy completion
-export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
-
-bindkey -r '^T'
-bindkey '^F' fzf-file-widget
+# google cloud
+export PATH="$HOME/google-cloud-sdk/bin:$PATH"
 
 # python
 export PYENV_ROOT="$HOME/.pyenv"
