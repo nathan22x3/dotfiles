@@ -43,11 +43,15 @@ nnoremap <C-t> :NERDTreeToggle<cr>
 " mappings
 "-------------------------------------------------------------------------------
 " remove search highlight
-nnoremap <leader><leader> :nohl<cr>
+nnoremap <leader>h :nohl<cr>
 
 " quick save
 nnoremap <leader>w :w<cr>
-inoremap <leader>w <Esc>:w<cr>
+
+" rename symbol
+nnoremap <leader>r :action RenameElement<cr>
+nnoremap <leader>lj :action GotoNextError<cr>
+nnoremap <leader>lk :action GotoPreviousError<cr>
 
 " increase/decrease number
 nnoremap + <C-a>
@@ -67,6 +71,16 @@ inoremap <C-h> <C-o>h
 inoremap <C-l> <C-o>l
 inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
+
+" centering when scrolling and jumping
+nnoremap <C-u> <C-u>zz
+nnoremap <C-d> <C-d>zz
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap \* \*zz
+
+" keep yanked text in register
+xnoremap <leader>p \"_dP
 
 " tab
 nmap H :tabp<cr>

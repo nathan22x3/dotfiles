@@ -47,20 +47,6 @@ lvim.keys.normal_mode["L"] = ":BufferLineCycleNext<cr>"
 --   },
 -- }
 
--- Use which-key to add extra bindings with the leader-key prefix
--- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
--- lvim.builtin.which_key.mappings["t"] = {
---   name = "+Trouble",
---   r = { "<cmd>Trouble lsp_references<cr>", "References" },
---   f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
---   d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
---   q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
---   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
---   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Wordspace Diagnostics" },
--- }
-
--- TODO: User Config for predefined plugins
--- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.notify.active = true
@@ -205,10 +191,23 @@ lvim.plugins = {
   "tpope/vim-surround",
   "vim-scripts/argtextobj.vim",
   "luisiacc/gruvbox-baby",
-  "norcalli/nvim-colorizer.lua"
+  "norcalli/nvim-colorizer.lua",
+  "stevearc/dressing.nvim",
+  "ziontee113/color-picker.nvim",
+  "ziontee113/icon-picker.nvim",
 }
 
 require("colorizer").setup()
+require("color-picker").setup()
+require("icon-picker").setup({
+  disable_legacy_commands = true
+})
+
+lvim.builtin.which_key.mappings["<space>"] = {
+  name = "Picker",
+  c = { ":PickColor<cr>", "Color Picker" },
+  i = { ":IconPickerNormal<cr>", "Icon Picker" }
+}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {

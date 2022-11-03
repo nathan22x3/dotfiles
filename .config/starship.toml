@@ -32,3 +32,6 @@ behind = "⇣ ${count}"
 [python]
 symbol = " "
 python_binary = "python3"
+
+[gcloud]
+disabled = true

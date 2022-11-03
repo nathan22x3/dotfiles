@@ -1,8 +1,9 @@
 # fig pre block
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 
 # core settings
 export TERM="xterm-256color"
+export GPG_TTY="$(tty)"
 export VISUAL="$(which lvim)"
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|-|cd ..|..|clear)"
 export PATH="$HOME/.local/bin:$PATH" # local binaries
@@ -131,4 +132,4 @@ fi
 zplug load # this load zlug plugins and add commands
 
 # fig post block
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
