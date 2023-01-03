@@ -23,6 +23,7 @@ opt.signcolumn = "yes" -- always show the sign column
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["H"] = ":BufferLineCyclePrev<cr>"
 lvim.keys.normal_mode["L"] = ":BufferLineCycleNext<cr>"
+lvim.keys.insert_mode["jj"] = "<Esc>"
 
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
@@ -49,7 +50,6 @@ lvim.keys.normal_mode["L"] = ":BufferLineCycleNext<cr>"
 
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.view.width = 35

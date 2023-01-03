@@ -58,10 +58,13 @@ nnoremap + <C-a>
 nnoremap - <C-x>
 
 " move line
+nnoremap J mzJ`z
 nnoremap <C-j> :m +1<cr>
 nnoremap <C-k> :m -2<cr>
 inoremap <C-j> <Esc>:m +1<cr>gi
 inoremap <C-k> <Esc>:m -2<cr>gi
+vnoremap <c-j> :m '>+1<cr>gv=gv
+vnoremap <c-k> :m '<-2<cr>gv=gv
 
 " exit insert mode
 inoremap jj <Esc>
