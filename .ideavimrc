@@ -48,10 +48,10 @@ nnoremap <leader>h :nohl<cr>
 " quick save
 nnoremap <leader>w :w<cr>
 
-" rename symbol
+" action mappings
 nnoremap <leader>r :action RenameElement<cr>
-nnoremap <leader>lj :action GotoNextError<cr>
-nnoremap <leader>lk :action GotoPreviousError<cr>
+nnoremap gj :action GotoNextError<cr>
+nnoremap gk :action GotoPreviousError<cr>
 
 " increase/decrease number
 nnoremap + <C-a>
@@ -67,7 +67,7 @@ vnoremap <c-j> :m '>+1<cr>gv=gv
 vnoremap <c-k> :m '<-2<cr>gv=gv
 
 " exit insert mode
-inoremap jj <Esc>
+inoremap jk <Esc>
 
 " movement in insert mode
 inoremap <C-h> <C-o>h

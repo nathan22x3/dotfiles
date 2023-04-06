@@ -115,6 +115,9 @@ export BAT_THEME="gruvbox-dark"
 # thefuck
 eval $(thefuck --alias)
 
+# docker
+source $HOME/.docker/init-zsh.sh || true
+
 # zplug
 export ZPLUG_HOME="$HOME/.zplug"
 source $ZPLUG_HOME/init.zsh
