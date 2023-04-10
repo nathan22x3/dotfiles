@@ -15,15 +15,22 @@ opt.laststatus = 3 -- always show status line of the last window
 opt.scrolloff = 10 -- keep above and below the cursor number of lines
 opt.showtabline = 2 -- always show tabs
 
--- sidebar
 opt.relativenumber = true -- displayed number to be	relative to the cursor
 opt.signcolumn = "yes" -- always show the sign column
 
--- keymapping
+-- mappings
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["H"] = ":BufferLineCyclePrev<cr>"
 lvim.keys.normal_mode["L"] = ":BufferLineCycleNext<cr>"
 lvim.keys.insert_mode["jk"] = "<Esc>"
+
+lvim.builtin.terminal.open_mapping = "<c-t>"
+lvim.builtin.which_key.mappings["t"] = {
+  name = "Terminal",
+  f = { "<cmd>ToggleTerm<cr>", "Floating terminal" },
+  v = { "<cmd>2ToggleTerm size=30 direction=vertical<cr>", "Split vertical" },
+  h = { "<cmd>2ToggleTerm size=30 direction=horizontal<cr>", "Split horizontal" },
+}
 
 -- misc
 lvim.builtin.alpha.active = true
@@ -47,7 +54,6 @@ lvim.builtin.treesitter.ensure_installed = {
   "yaml",
 }
 
-lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
 -- lualine

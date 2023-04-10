@@ -35,3 +35,6 @@ python_binary = "python3"
 
 [gcloud]
 disabled = true
+
+[docker_context]
+disabled = true
