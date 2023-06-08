@@ -26,8 +26,8 @@ end
 
 -- basic mappings
 nmap('<leader>r', ':so ' .. HOME .. '/.config/nvim/init.lua<cr>') -- reload configurations
-nmap('<leader>h', ':nohl<cr>') -- clear search highlighting
-imap('jj', '<Esc>') -- quickly exit insert mode
+nmap('<leader>h', ':nohl<cr>')                                    -- clear search highlighting
+imap('jj', '<Esc>')                                               -- quickly exit insert mode
 
 -- moving cursor in insert mode
 imap('<C-h>', '<C-o>h')
@@ -40,16 +40,16 @@ nmap('+', '<C-a>') -- increase the number by 1
 nmap('-', '<C-x>') -- decrease the number by 1
 
 -- buffer
-nmap('<C-s>', ':w<cr>') -- save current buffer
-imap('<C-s>', '<Esc>:w<cr>') -- save current buffer
+nmap('<C-s>', ':w<cr>')            -- save current buffer
+imap('<C-s>', '<Esc>:w<cr>')       -- save current buffer
 
-nmap('<S-h>', ':bprev<cr>') -- jump to the previous buffer
-nmap('<S-l>', ':bnext<cr>') -- Jump to the next buffer
+nmap('<S-h>', ':bprev<cr>')        -- jump to the previous buffer
+nmap('<S-l>', ':bnext<cr>')        -- Jump to the next buffer
 nmap('<leader>bd', ':bdelete<cr>') -- kill current buffer
 
 -- window
-nmap('ss', ':vsplit<cr>') -- split window horizontally
-nmap('sv', ':split<cr>') -- split window vertically
+nmap('ss', ':vsplit<cr>')    -- split window horizontally
+nmap('sv', ':split<cr>')     -- split window vertically
 
 nmap('<leader>wh', '<C-w>h') -- jump to the left window
 nmap('<leader>wj', '<C-w>j') -- jump to the below window
@@ -65,9 +65,9 @@ vim.keymap.set('i', '<S-Tab>',
   'coc#pum#visible() ? coc#pum#prev(1) : "\\<C-h>"',
   { expr = true, noremap = true }) -- cycle backward completion menu
 
-vim.keymap.set( 'i', '<cr>',
+vim.keymap.set('i', '<cr>',
   'coc#pum#visible() ? coc#pum#confirm() : "\\<C-g>u\\<cr>\\<c-r>=coc#on_enter()\\<cr>"',
-  { expr = true, noremap = true }) -- accept completion
+  { expr = true, noremap = true })                                                 -- accept completion
 
 vim.keymap.set('i', '<C-space>', 'coc#refresh()', { expr = true, noremap = true }) -- trigger completion
 

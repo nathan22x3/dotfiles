@@ -21,7 +21,7 @@
   protocol = ssh
 
 [alias]
-  cf = config --global -e
+  rc = config --global -e
   st = status
   save = "!git add . && git commit"
   undo = reset HEAD~1 --mixed

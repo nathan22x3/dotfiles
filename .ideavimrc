@@ -89,3 +89,6 @@ xnoremap <leader>p \"_dP
 nmap H :tabp<cr>
 nmap L :tabn<cr>
 nmap <leader>q :tabc<cr>
+
+" sort selected lines
+vnoremap <leader>s :sort<cr>

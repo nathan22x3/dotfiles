@@ -9,17 +9,16 @@ lvim.format_on_save = true
 lvim.colorscheme = "gruvbox-baby"
 lvim.transparent_window = true
 
-opt.lazyredraw = true -- for better performance while	executing macros
-opt.synmaxcol = 300 -- stop syntax highlight after number of lines for performance
-opt.laststatus = 3 -- always show status line of the last window
-opt.scrolloff = 10 -- keep above and below the cursor number of lines
-opt.showtabline = 2 -- always show tabs
+opt.lazyredraw = true     -- for better performance while	executing macros
+opt.synmaxcol = 300       -- stop syntax highlight after number of lines for performance
+opt.laststatus = 3        -- always show status line of the last window
+opt.scrolloff = 10        -- keep above and below the cursor number of lines
+opt.showtabline = 2       -- always show tabs
 
 opt.relativenumber = true -- displayed number to be	relative to the cursor
-opt.signcolumn = "yes" -- always show the sign column
+opt.signcolumn = "yes"    -- always show the sign column
 
 -- mappings
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["H"] = ":BufferLineCyclePrev<cr>"
 lvim.keys.normal_mode["L"] = ":BufferLineCycleNext<cr>"
 lvim.keys.insert_mode["jk"] = "<Esc>"
@@ -27,12 +26,12 @@ lvim.keys.insert_mode["jk"] = "<Esc>"
 lvim.builtin.terminal.open_mapping = "<c-t>"
 lvim.builtin.which_key.mappings["t"] = {
   name = "Terminal",
-  f = { "<cmd>ToggleTerm<cr>", "Floating terminal" },
-  v = { "<cmd>2ToggleTerm size=30 direction=vertical<cr>", "Split vertical" },
-  h = { "<cmd>2ToggleTerm size=30 direction=horizontal<cr>", "Split horizontal" },
+  f = { ":ToggleTerm<cr>", "Floating terminal" },
+  v = { ":2ToggleTerm size=30 direction=vertical<cr>", "Split vertical" },
+  h = { ":2ToggleTerm size=30 direction=horizontal<cr>", "Split horizontal" },
 }
 
--- misc
+-- configure core plugins
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
@@ -65,7 +64,7 @@ if lualine then
   local inactive_sections = lualine.inactive_sections
 
   -- options
-  options.theme = "gruvbox"
+  options.theme = "gruvbox-baby"
   options.icons_enabled = true
   options.component_separators = { left = '', right = '' }
   options.section_separators = { left = '', right = '' }
