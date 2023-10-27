@@ -6,13 +6,13 @@
 [user]
   name = Nathan Nguyen
   email = nathan22x3@gmail.com
-	signingkey = 6837E5AD76E81CC5
+  signingkey = 6837E5AD76E81CC5
 
 [init]
   defaultBranch = main
 
 [commit]
-	gpgsign = true
+  gpgsign = true
 
 [tag]
   gpgsign = true

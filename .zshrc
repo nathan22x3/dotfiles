@@ -87,6 +87,7 @@ export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
 
 # google cloud
 export PATH="$HOME/google-cloud-sdk/bin:$PATH"
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # python
 export PYENV_ROOT="$HOME/.pyenv"
@@ -118,6 +119,9 @@ eval $(thefuck --alias)
 # docker
 source $HOME/.docker/init-zsh.sh || true
 
+# webstorm
+export PATH="/Applications/WebStorm.app/Contents/MacOS:$PATH"
+
 # zplug
 export ZPLUG_HOME="$HOME/.zplug"
 source $ZPLUG_HOME/init.zsh
@@ -136,3 +140,6 @@ zplug load # this load zlug plugins and add commands
 
 # fig post block
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+# bun completions
+[ -s "/Users/nam.nguyen13/.bun/_bun" ] && source "/Users/nam.nguyen13/.bun/_bun"
