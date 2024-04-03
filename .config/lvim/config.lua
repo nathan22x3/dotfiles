@@ -6,9 +6,10 @@ local opt = vim.opt
 
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "gruvbox-baby"
+lvim.colorscheme = "eldritch"
 lvim.transparent_window = true
 
+opt.termguicolors = true
 opt.lazyredraw = true -- for better performance while	executing macros
 opt.synmaxcol = 300   -- stop syntax highlight after number of lines for performance
 opt.laststatus = 3    -- always show status line of the last window
@@ -66,7 +67,7 @@ if lualine then
     local inactive_sections = lualine.inactive_sections
 
     -- options
-    options.theme = "gruvbox-baby"
+    options.theme = "eldritch"
     options.icons_enabled = true
     options.component_separators = { left = "", right = "" }
     options.section_separators = { left = "", right = "" }
@@ -100,11 +101,9 @@ lvim.plugins = {
     "tpope/vim-surround",
     "vim-scripts/argtextobj.vim",
     "luisiacc/gruvbox-baby",
+    "eldritch-theme/eldritch.nvim",
     "stevearc/dressing.nvim",
-    {
-        "norcalli/nvim-colorizer.lua",
-        config = true,
-    },
+    "brenoprata10/nvim-highlight-colors",
     {
         "ziontee113/color-picker.nvim",
         config = true,
@@ -160,6 +159,23 @@ lvim.plugins = {
             vim.wo.conceallevel = 2
         end,
     }
+}
+
+lvim.builtin.alpha.dashboard.section.header.val = {
+    [[⠀⠀⠀⠀⠀⠀⠀⣠⡤⠶⡄⠀⠀⠀⠀⠀⠀⠀⢠⠶⣦⣀⠀⠀⠀⠀⠀⠀⠀  ]],
+    [[ ⠀⠀⠀⠀⢀⣴⣿⡟⠀⠈⣀⣾⣝⣯⣿⣛⣷⣦⡀⠀⠈⢿⣿⣦⡀⠀⠀⠀⠀ ]],
+    [[ ⠀⠀⠀⣴⣿⣿⣿⡇⠀⢼⣿⣽⣿⢻⣿⣻⣿⣟⣷⡄⠀⢸⣿⣿⣾⣄⠀⠀⠀ ]],
+    [[ ⠀⠀⣞⣿⣿⣿⣿⣷⣤⣸⣟⣿⣿⣻⣯⣿⣿⣿⣿⣀⣴⣿⣿⣿⣿⣯⣆⠀⠀ ]],
+    [[ ⠀⡼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣜⡆⠀ ]],
+    [[ ⢠⣟⣯⣿⣿⣿⣷⢿⣫⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣬⣟⠿⣿⣿⣿⣿⡷⣾⠀ ]],
+    [[ ⢸⣯⣿⣿⡏⠙⡇⣾⣟⣿⡿⢿⣿⣿⣿⣿⣿⢿⣟⡿⣿⠀⡟⠉⢹⣿⣿⢿⡄ ]],
+    [[ ⢸⣯⡿⢿⠀⠀⠱⢈⣿⢿⣿⡿⣏⣿⣿⣿⣿⣿⣿⣿⣿⣀⠃⠀⢸⡿⣿⣿⡇ ]],
+    [[ ⢸⣿⣇⠈⢃⣴⠟⠛⢉⣸⣇⣹⣿⣿⠚⡿⣿⣉⣿⠃⠈⠙⢻⡄⠎⠀⣿⡷⠃ ]],
+    [[ ⠈⡇⣿⠀⠀⠻⣤⠠⣿⠉⢻⡟⢷⣝⣷⠉⣿⢿⡻⣃⢀⢤⢀⡏⠀⢠⡏⡼⠀ ]],
+    [[ ⠀⠘⠘⡅⠀⣔⠚⢀⣉⣻⡾⢡⡾⣻⣧⡾⢃⣈⣳⢧⡘⠤⠞⠁⠀⡼⠁⠀⠀ ]],
+    [[ ⠀⠀⠀⠸⡀⠀⢠⡎⣝⠉⢰⠾⠿⢯⡘⢧⡧⠄⠀⡄⢻⠀⠀⠀⢰⠁⠀⠀⠀ ]],
+    [[ ⠀⠀⠀⠀⠁⠀⠈⢧⣈⠀⠘⢦⠀⣀⠇⣼⠃⠰⣄⣡⠞⠀⠀⠀⠀⠀⠀⠀⠀ ]],
+    [[ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⢤⠼⠁⠀⠀⠳⣤⡼⠀⠀⠀⠀⠀⠀      ]],
 }
 
 lvim.builtin.which_key.mappings["<space>"] = {

@@ -20,6 +20,9 @@
 [hub]
   protocol = ssh
 
+[gpg]
+	program = /usr/local/MacGPG2/bin/gpg2
+
 [alias]
   rc = config --global -e
   st = status
@@ -44,10 +47,10 @@
   show = delta
 
 [interactive]
-  diffFilter = delta --color-only --features=gruvbox-dark --paging=never
+  diffFilter = delta --color-only --features=eldritch --paging=never
 
 [delta]
-  features = gruvbox-dark
+  features = eldritch
 
 [delta "gruvbox-dark"]
   commit-decoration-style = blue ol
@@ -66,6 +69,24 @@
   plus-emph-style = syntax bold "#696912"
   plus-style = syntax "#46460c"
   syntax-theme = gruvbox-dark
+
+[delta "eldritch"]
+  commit-decoration-style = blue ol
+  commit-style = raw
+  dark = true
+  file-style = omit
+  hunk-header-decoration-style = blue box
+  hunk-header-file-style = red
+  hunk-header-line-number-style = "#37f499"
+  keep-plus-minus-markers = false
+  line-numbers-minus-style = "#f9515d"
+  line-numbers-plus-style = "#37f499"
+  line-numbers = true
+  minus-emph-style = syntax bold "#d63843"
+  minus-style = syntax "#b21f29"
+  plus-emph-style = syntax bold "#1fbe72"
+  plus-style = syntax "#07884a"
+  syntax-theme = Eldritch
 
 [includeIf "gitdir:~/work/"]
     path = ~/work/.gitconfig

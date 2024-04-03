@@ -1,6 +1,3 @@
-# fig pre block
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-
 # general
 export GPG_TTY="$(tty)"
 export TERM="screen-256color"
@@ -45,6 +42,7 @@ fi
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # this loads key bindings and fuzzy completion
 export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
+export FZF_DEFAULT_OPTS='--color=fg:#ebfafa,bg:#282a36,hl:#37f499 --color=fg+:#ebfafa,bg+:#212337,hl+:#37f499 --color=info:#f7c67f,prompt:#04d1f9,pointer:#7081d0 --color=marker:#7081d0,spinner:#f7c67f,header:#323449'
 
 bindkey -r '^T'
 bindkey '^F' fzf-file-widget
@@ -111,7 +109,7 @@ export PATH="$BUN_PATH/bin:$PATH"
 [ -s "$BUN_PATH/_bun" ] && source "$BUN_PATH/_bun" # this load bun completions
 
 # bat
-export BAT_THEME="gruvbox-dark"
+export BAT_THEME="Eldritch"
 
 # thefuck
 eval $(thefuck --alias)
@@ -137,9 +135,6 @@ if ! zplug check --verbose; then
 fi
 
 zplug load # this load zlug plugins and add commands
-
-# fig post block
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
 # bun completions
 [ -s "/Users/nam.nguyen13/.bun/_bun" ] && source "/Users/nam.nguyen13/.bun/_bun"

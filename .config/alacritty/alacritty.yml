@@ -5,11 +5,11 @@ window:
   padding:
     x: 6
     y: 6
-  opacity: 0.95
+  opacity: 0.9
 
 font:
   normal:
-    family: SauceCodePro Nerd Font
+    family: SpaceMono Nerd Font
     style: Regular
   size: 16
 
@@ -41,4 +41,29 @@ schemes:
       cyan:    '#8ec07c'
       white:   '#ebdbb2'
 
-colors: *GruvboxDark
+    Eldritch: &Eldritch
+      primary:
+        background: '#212337'
+        foreground: '#ebfafa'
+
+      normal:
+        black:   '#21222c'
+        red:     '#f9515d'
+        green:   '#37f499'
+        yellow:  '#e9f941'
+        blue:    '#9071f4'
+        cyan:    '#04d1f9'
+        magenta: '#f265b5'
+        white:   '#ebfafa'
+
+      bright:
+        black:   '#7081d0'
+        red:     '#f16c75'
+        green:   '#69f8b3'
+        yellow:  '#f1fc79'
+        blue:    '#a48cf2'
+        magenta: '#fd92ce'
+        cyan:    '#66e4fd'
+        white:   '#ffffff'
+
+colors: *Eldritch

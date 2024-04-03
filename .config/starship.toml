@@ -1,9 +1,7 @@
 add_newline = false
 
 [battery]
-full_symbol = "🔋 "
-charging_symbol = "⚡️ "
-discharging_symbol = "💀 "
+disabled = true
 
 [character]
 success_symbol = "[➜](bold green)"
