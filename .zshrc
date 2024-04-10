@@ -120,6 +120,9 @@ source $HOME/.docker/init-zsh.sh || true
 # webstorm
 export PATH="/Applications/WebStorm.app/Contents/MacOS:$PATH"
 
+# spicetify
+export PATH=$PATH:/Users/nam.nguyen13/.spicetify
+
 # zplug
 export ZPLUG_HOME="$HOME/.zplug"
 source $ZPLUG_HOME/init.zsh
