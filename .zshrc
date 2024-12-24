@@ -17,6 +17,9 @@ export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 export ZSH="$HOME/.oh-my-zsh"
 
 plugins=(
+  asdf
+  nx-completion
+  z
   zsh-autosuggestions
   zsh-interactive-cd
   zsh-syntax-highlighting
@@ -78,15 +81,6 @@ load-nvmrc
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
-# android studio
-export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
-export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
-export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
-
-# google cloud
-export PATH="$HOME/google-cloud-sdk/bin:$PATH"
-export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-
 # python
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -100,28 +94,14 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
 
-# php
-export PHP_BIN="$(brew --prefix)/bin/php"
-
-# bun
-export BUN_PATH="$HOME/.bun"
-export PATH="$BUN_PATH/bin:$PATH"
-[ -s "$BUN_PATH/_bun" ] && source "$BUN_PATH/_bun" # this load bun completions
-
 # bat
 export BAT_THEME="Eldritch"
 
 # thefuck
 eval $(thefuck --alias)
 
-# docker
-source $HOME/.docker/init-zsh.sh || true
-
 # webstorm
 export PATH="/Applications/WebStorm.app/Contents/MacOS:$PATH"
-
-# spicetify
-export PATH=$PATH:/Users/nam.nguyen13/.spicetify
 
 # zplug
 export ZPLUG_HOME="$HOME/.zplug"
@@ -138,6 +118,3 @@ if ! zplug check --verbose; then
 fi
 
 zplug load # this load zlug plugins and add commands
-
-# bun completions
-[ -s "/Users/nam.nguyen13/.bun/_bun" ] && source "/Users/nam.nguyen13/.bun/_bun"
